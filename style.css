@@ -84,9 +84,38 @@ body {
   transition: opacity .25s ease, transform .25s ease;
 }
 
+.menu-card .p-5 > div {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.menu-card .p-5 > div > p {
+  align-self: flex-end;
+}
+
 .menu-card h3 {
   min-width: 0;
   overflow-wrap: anywhere;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 1024px) {
+  .menu-card .p-5 > div {
+    align-items: center;
+    flex-direction: row;
+    gap: .75rem;
+  }
+
+  .menu-card .p-5 > div > p {
+    align-self: auto;
+  }
+
+  .menu-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 .menu-card.is-hidden {
