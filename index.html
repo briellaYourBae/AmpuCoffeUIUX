@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta name="description" content="AmpuCoffe — ruang hangat untuk kopi, cerita, dan jeda kecil di Purwokerto.">
+  <title>AmpuCoffe — Seduh Cerita, Temukan Jeda</title>
+  <link rel="icon" type="image/jpeg" href="image/LogoAmpu.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#291904',
+            roast: '#442b15',
+            terracotta: '#bd6848',
+            cream: '#f6f1e8',
+            latte: '#e8dcc8',
+            olive: '#68704c'
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(41, 25, 4, .10)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden bg-cream text-espresso antialiased">
+  <a href="#main" class="sr-only z-[100] rounded-full bg-espresso px-5 py-3 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Langsung ke konten</a>
+
+  <div class="bg-espresso px-4 py-2 text-center text-[10px] font-semibold uppercase tracking-[.2em] text-cream sm:text-xs">
+    Dibuat dengan hati, diseduh di Purwokerto <svg class="mx-2 inline h-3 w-3 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Buka setiap hari
+  </div>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-espresso/5 bg-cream/90 backdrop-blur-xl transition-shadow">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12" aria-label="Navigasi utama">
+      <a href="#beranda" class="flex items-center gap-3" aria-label="AmpuCoffe, beranda">
+        <img src="image/LogoAmpu.jpeg" alt="Logo AmpuCoffe" class="h-11 w-11 rounded-full border border-espresso/10 bg-white object-cover object-center">
+        <span class="font-display text-xl font-bold tracking-tight">Ampu<span class="text-terracotta">Coffe</span><span class="mt-0.5 block font-sans text-[9px] font-medium uppercase tracking-[.25em] text-espresso/55">Purwokerto, Indonesia</span></span>
+      </a>
+      <div id="desktop-nav" class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <a class="nav-link" href="#cerita">Cerita kami</a>
+        <a class="nav-link" href="#menu">Menu</a>
+        <a class="nav-link" href="#ruang">Ruang kami</a>
+        <a class="nav-link" href="#kunjungi">Kunjungi</a>
+      </div>
+      <a href="#kunjungi" class="hidden items-center gap-2 rounded-full bg-espresso px-5 py-3 text-xs font-semibold text-cream transition hover:bg-terracotta hover:shadow-lg sm:inline-flex">
+        Temukan kami <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button id="menu-toggle" class="flex h-11 w-11 items-center justify-center rounded-full border border-espresso/15 lg:hidden" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Buka menu</span><span class="relative block h-4 w-5"><span class="menu-line absolute left-0 top-0 h-px w-5 bg-espresso transition"></span><span class="menu-line absolute left-0 top-2 h-px w-5 bg-espresso transition"></span><span class="menu-line absolute left-0 top-4 h-px w-5 bg-espresso transition"></span></span>
+      </button>
+    </nav>
+    <div id="mobile-nav" class="hidden border-t border-espresso/10 bg-cream px-6 pb-5 pt-3 lg:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1">
+        <a class="mobile-link rounded-xl px-3 py-3 text-sm hover:bg-latte" href="#cerita">Cerita kami</a>
+        <a class="mobile-link rounded-xl px-3 py-3 text-sm hover:bg-latte" href="#menu">Menu</a>
+        <a class="mobile-link rounded-xl px-3 py-3 text-sm hover:bg-latte" href="#ruang">Ruang kami</a>
+        <a class="mobile-link rounded-xl px-3 py-3 text-sm hover:bg-latte" href="#kunjungi">Kunjungi</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="beranda" class="relative isolate min-h-[690px] overflow-hidden bg-roast text-cream sm:min-h-[760px]">
+      <img class="hero-image absolute inset-0 -z-20 h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2200&q=85" alt="" fetchpriority="high">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#211506]/90 via-[#211506]/55 to-[#211506]/15"></div>
+      <div class="grain absolute inset-0 -z-10 opacity-20"></div>
+      <div class="mx-auto flex min-h-[690px] max-w-7xl items-center px-6 py-24 sm:min-h-[760px] sm:px-10 lg:px-16">
+        <div class="max-w-3xl">
+          <div class="reveal mb-7 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[.2em] backdrop-blur-sm sm:text-xs">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#d9a276]"></span> A little pause, a lot of heart
+          </div>
+          <h1 class="reveal delay-1 font-display text-5xl leading-[1.08] tracking-tight sm:text-7xl lg:text-[88px]">Seduh cerita,<br><em class="font-medium text-[#e2b38b]">temukan jeda.</em></h1>
+          <p class="reveal delay-2 mt-7 max-w-lg text-sm leading-7 text-white/80 sm:text-base sm:leading-8">Lebih dari secangkir kopi. Ampu adalah ruang hangat untuk bertemu, berkarya, dan menikmati hari dengan cara yang sederhana.</p>
+          <div class="reveal delay-3 mt-9 flex flex-wrap items-center gap-4">
+            <a href="#cerita" class="group inline-flex items-center gap-3 rounded-full bg-cream px-6 py-4 text-sm font-semibold text-espresso transition hover:bg-[#e2b38b]">Kenali Ampu <svg class="h-4 w-4 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.75 12h14.5m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#menu" class="rounded-full border border-white/40 px-6 py-4 text-sm font-semibold transition hover:border-white hover:bg-white/10">Lihat pilihan menu</a>
+          </div>
+        </div>
+        <div class="float absolute bottom-12 right-8 hidden max-w-[190px] rotate-2 rounded-2xl bg-cream p-4 text-espresso shadow-2xl md:block lg:right-[9%]">
+          <div class="mb-3 flex items-center gap-2"><svg class="h-4 w-4 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="text-[9px] font-bold uppercase tracking-[.19em]">Catatan kecil</span></div>
+          <p class="font-display text-lg leading-snug">Hari baik dimulai dari jeda yang baik.</p>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-espresso/20 to-transparent"></div>
+      <a href="#cerita" class="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[9px] uppercase tracking-[.2em] text-white/80 sm:flex">Scroll untuk cerita <svg class="h-4 w-4 animate-bounce" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.75v14.5m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+
+    <div class="overflow-hidden border-b border-espresso/10 bg-[#eee5d7] py-4">
+      <div class="marquee-track flex w-max">
+        <div class="marquee-content flex shrink-0 items-center gap-8 whitespace-nowrap pr-8 text-[10px] font-semibold uppercase tracking-[.25em] text-espresso/70 sm:text-xs">
+          <span>Small batch, big heart</span><svg class="h-3.5 w-3.5 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Tempat pulang sejenak</span><svg class="h-3.5 w-3.5 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Kopi lokal, cerita personal</span><svg class="h-3.5 w-3.5 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <section id="cerita" class="px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[.95fr_1.05fr] lg:gap-24">
+        <div class="reveal relative">
+          <div class="absolute -left-5 -top-5 h-28 w-28 rounded-full border border-terracotta/40"></div>
+          <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+            <img class="h-full w-full object-cover transition duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1100&q=85" alt="Suasana hangat di dalam kedai kopi" loading="lazy">
+          </div>
+          <div class="absolute -bottom-6 -right-4 rounded-2xl bg-terracotta px-6 py-5 text-cream shadow-soft sm:right-[-2rem]"><p class="font-display text-3xl">Since</p><p class="text-xs font-semibold uppercase tracking-[.2em]">Made with love</p></div>
+        </div>
+        <div class="reveal delay-1">
+          <p class="mb-5 text-[10px] font-bold uppercase tracking-[.25em] text-terracotta sm:text-xs">Sedikit tentang kami</p>
+          <h2 class="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">Ruang kecil untuk<br><em class="text-terracotta">hal-hal besar.</em></h2>
+          <p class="mt-7 text-sm leading-7 text-espresso/70 sm:text-base sm:leading-8">Kami percaya kopi terbaik bukan cuma soal rasa, tapi juga tentang siapa yang menemani dan cerita yang tumbuh di antaranya. AmpuCoffe hadir di Purwokerto sebagai tempat singgah yang terasa akrab—untuk mengerjakan ide, bertukar kabar, atau sekadar bernapas sebentar.</p>
+          <p class="mt-4 text-sm leading-7 text-espresso/70 sm:text-base sm:leading-8">Setiap cangkir kami siapkan dengan perhatian, memakai biji pilihan dan bahan yang bersahabat. Datang sendiri pun selalu punya tempat.</p>
+          <div class="mt-9 flex items-center gap-5 border-t border-espresso/15 pt-6">
+            <img src="image/LogoAmpu.jpeg" alt="" class="h-12 w-12 rounded-full object-cover">
+            <div><p class="font-display text-lg">AmpuCoffe</p><p class="text-xs text-espresso/55">Kopi, ruang, dan cerita.</p></div>
+            <svg class="ml-auto h-8 w-8 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="bg-[#eee7db] px-6 py-24 sm:px-10 sm:py-28 lg:px-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div><p class="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-terracotta sm:text-xs">Dari bar kami</p><h2 class="font-display text-4xl sm:text-6xl">Teman untuk<br class="sm:hidden"> setiap suasana.</h2></div>
+          <p class="max-w-sm text-sm leading-7 text-espresso/65">Pilihan kopi, minuman non-kopi, dan camilan AmpuCoffe. Foto produk akan ditambahkan menyusul.</p>
+        </div>
+        <div class="reveal mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter menu">
+          <button class="filter-btn rounded-full bg-espresso px-5 py-2.5 text-xs font-semibold text-cream transition" data-filter="all" aria-pressed="true">Semua</button>
+          <button class="filter-btn rounded-full border border-espresso/20 px-5 py-2.5 text-xs font-semibold transition hover:bg-espresso hover:text-cream" data-filter="coffee" aria-pressed="false">Kopi</button>
+          <button class="filter-btn rounded-full border border-espresso/20 px-5 py-2.5 text-xs font-semibold transition hover:bg-espresso hover:text-cream" data-filter="non-coffee" aria-pressed="false">Non-kopi</button>
+          <button class="filter-btn rounded-full border border-espresso/20 px-5 py-2.5 text-xs font-semibold transition hover:bg-espresso hover:text-cream" data-filter="bites" aria-pressed="false">Teman ngemil</button>
+        </div>
+        <div id="menu-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Crash Coffee</h3><p class="shrink-0 text-sm font-semibold">Rp8.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Latte</h3><p class="shrink-0 text-sm font-semibold">Rp12.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Americano</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Palm Sugar</h3><p class="shrink-0 text-sm font-semibold">Rp13.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Caramel Regal</h3><p class="shrink-0 text-sm font-semibold">Rp14.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Butterchoc</h3><p class="shrink-0 text-sm font-semibold">Rp15.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Matchalatte</h3><p class="shrink-0 text-sm font-semibold">Rp15.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Coffee Signature</h3><p class="shrink-0 text-sm font-semibold">Rp25.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-terracotta">Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Manual Brew</h3><p class="max-w-28 text-right text-xs font-medium leading-4 text-espresso/60">Harga belum tercantum</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Ice Tea</h3><p class="shrink-0 text-sm font-semibold">Rp5.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Lemon Tea</h3><p class="shrink-0 text-sm font-semibold">Rp8.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Teh Tarik</h3><p class="shrink-0 text-sm font-semibold">Rp9.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Milo+Fullcream</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Chocholatte</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Kusuda</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Redvelvet</h3><p class="shrink-0 text-sm font-semibold">Rp12.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Thai Tea</h3><p class="shrink-0 text-sm font-semibold">Rp14.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="non-coffee">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-olive">Non Coffee</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Matchalatte</h3><p class="shrink-0 text-sm font-semibold">Rp14.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Otak-Otak</h3><p class="shrink-0 text-sm font-semibold">Rp8.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Pop Mie</h3><p class="shrink-0 text-sm font-semibold">Rp8.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Roti Bakar Klasik</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Cireng</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Kebab</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-3 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">French Fries</h3><p class="shrink-0 text-sm font-semibold">Rp12.000</p></div></div>
+          </article>
+          <article class="menu-card reveal overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Mix Platter</h3><p class="shrink-0 text-sm font-semibold">Rp15.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-1 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Roti Meriam Original</h3><p class="shrink-0 text-sm font-semibold">Rp10.000</p></div></div>
+          </article>
+          <article class="menu-card reveal delay-2 overflow-hidden rounded-2xl bg-cream" data-category="bites">
+            <div class="menu-photo-placeholder" data-photo="#"><span class="menu-photo-mark" aria-hidden="true">#</span><span class="menu-photo-label">Foto menyusul</span></div>
+            <div class="p-5"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-[#a66a42]">Snack &amp; Food</p><div class="mt-2 flex items-center justify-between gap-3"><h3 class="font-display text-xl">Roti Meriam Coklat Keju</h3><p class="shrink-0 text-sm font-semibold">Rp13.000</p></div></div>
+          </article>
+        </div>
+        <p class="mt-6 text-[11px] text-espresso/50">Harga mengikuti daftar menu yang tersedia. Harga Manual Brew belum dicantumkan.</p>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-espresso px-6 py-20 text-cream sm:px-10 sm:py-24 lg:px-16">
+      <div class="grain absolute inset-0 opacity-20"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1fr_auto]">
+        <div class="reveal"><p class="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-[#dda17c]">Bulan ini di Ampu</p><h2 class="font-display text-4xl sm:text-5xl">Lebih banyak alasan<br>untuk mampir.</h2><p class="mt-5 max-w-xl text-sm leading-7 text-white/65">Ada menu musiman dan agenda kecil yang sedang kami siapkan. Pantau kabar terbaru kami dan temukan sesuatu yang baru saat berkunjung.</p></div>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="reveal delay-1 inline-flex w-fit items-center gap-4 rounded-full border border-white/30 px-6 py-4 text-sm font-semibold transition hover:bg-cream hover:text-espresso">Ikuti kabar kami <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <svg class="absolute -bottom-12 -right-4 h-64 w-64 text-white/[.04] sm:h-96 sm:w-96" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 4 59 39 91 18 68 45 98 50 68 55 91 82 59 61 50 96 41 61 9 82 32 55 2 50 32 45 9 18 41 39 50 4Z" stroke="currentColor" stroke-width="1.2"/></svg>
+    </section>
+
+    <section id="ruang" class="px-6 py-24 sm:px-10 sm:py-28 lg:px-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-terracotta sm:text-xs">Sudut favoritmu</p><h2 class="font-display text-4xl sm:text-6xl">Singgah sebentar,<br><em class="text-terracotta">tinggal lebih lama.</em></h2></div><p class="max-w-sm text-sm leading-7 text-espresso/65">Cahaya yang pas, kursi yang nyaman, dan suasana yang bikin betah. Intip suasana kecil di Ampu.</p></div>
+        <div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+          <button class="gallery-button reveal group relative aspect-[4/5] overflow-hidden rounded-2xl text-left sm:rounded-3xl" data-image="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=90" data-caption="Sudut nyaman, cerita yang panjang" aria-label="Perbesar foto suasana kedai"><img class="gallery-image h-full w-full object-cover" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80" alt="Interior kedai kopi yang hangat" loading="lazy"><span class="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent"></span><span class="absolute bottom-4 left-4 text-xs font-medium text-white sm:bottom-6 sm:left-6">A little corner</span><span class="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white backdrop-blur"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="gallery-button reveal delay-1 group relative mt-8 aspect-[4/5] overflow-hidden rounded-2xl text-left sm:mt-12 sm:rounded-3xl" data-image="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1800&q=90" data-caption="Ruang untuk bertemu dan bertumbuh" aria-label="Perbesar foto ruang kedai"><img class="gallery-image h-full w-full object-cover" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Meja dan kursi di coffee shop" loading="lazy"><span class="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent"></span><span class="absolute bottom-4 left-4 text-xs font-medium text-white sm:bottom-6 sm:left-6">Room to connect</span><span class="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white backdrop-blur"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="gallery-button reveal delay-2 group relative aspect-[4/5] overflow-hidden rounded-2xl text-left sm:rounded-3xl" data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=90" data-caption="Diracik pelan-pelan, dengan sepenuh hati" aria-label="Perbesar foto kopi"><img class="gallery-image h-full w-full object-cover" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Secangkir kopi dan biji kopi" loading="lazy"><span class="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent"></span><span class="absolute bottom-4 left-4 text-xs font-medium text-white sm:bottom-6 sm:left-6">Made with care</span><span class="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white backdrop-blur"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="gallery-button reveal delay-3 group relative mt-8 aspect-[4/5] overflow-hidden rounded-2xl text-left sm:mt-12 sm:rounded-3xl" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=90" data-caption="Tempat pulang sejenak di tengah hari" aria-label="Perbesar foto suasana kopi"><img class="gallery-image h-full w-full object-cover" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Barista meracik kopi" loading="lazy"><span class="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent"></span><span class="absolute bottom-4 left-4 text-xs font-medium text-white sm:bottom-6 sm:left-6">Your slow moment</span><span class="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white backdrop-blur"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#e9dfd0] px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <div class="reveal mx-auto max-w-4xl text-center">
+        <svg class="mx-auto mb-2 h-10 w-10 text-terracotta" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M12.4 7C7.2 9.8 4 14.4 4 20.1 4 24.3 6.4 27 10 27c3.1 0 5.3-2.1 5.3-5.2 0-3-1.9-4.9-4.7-5.1.3-2.1 1.8-4.3 4.2-5.9L12.4 7Zm13 0c-5.2 2.8-8.4 7.4-8.4 13.1 0 4.2 2.4 6.9 6 6.9 3.1 0 5.3-2.1 5.3-5.2 0-3-1.9-4.9-4.7-5.1.3-2.1 1.8-4.3 4.2-5.9L25.4 7Z"/></svg>
+        <blockquote class="font-display text-2xl leading-relaxed sm:text-4xl">Kadang yang kita butuhkan cuma tempat yang nyaman, kopi yang enak, dan waktu untuk diri sendiri.</blockquote>
+        <div class="mx-auto mt-8 h-px w-12 bg-terracotta"></div><p class="mt-4 text-[10px] font-bold uppercase tracking-[.2em] text-espresso/55">Sepenggal rasa dari Ampu</p>
+      </div>
+    </section>
+
+    <section id="kunjungi" class="px-6 py-24 sm:px-10 sm:py-28 lg:px-16">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+        <div class="reveal">
+          <p class="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-terracotta sm:text-xs">Pintu kami terbuka</p><h2 class="font-display text-4xl leading-tight sm:text-6xl">Sampai jumpa<br><em class="text-terracotta">di Ampu.</em></h2>
+          <p class="mt-6 max-w-md text-sm leading-7 text-espresso/65">Mampir untuk menikmati secangkir kopi atau menemukan sudut favoritmu. Kami tunggu di Purwokerto.</p>
+          <div class="mt-9 space-y-6">
+            <div class="flex gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-latte text-terracotta"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.25 10c0 5-7.25 11-7.25 11S4.75 15 4.75 10a7.25 7.25 0 1 1 14.5 0Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.25" stroke="currentColor" stroke-width="1.6"/></svg></span><div><h3 class="text-xs font-bold uppercase tracking-wider">Alamat</h3><p class="mt-1 text-sm leading-6 text-espresso/65">Purwokerto, Kabupaten Banyumas<br>Jawa Tengah, Indonesia</p><p class="mt-2 text-[10px] text-espresso/45">Alamat detail dapat dikonfirmasi melalui kanal sosial kami.</p></div></div>
+            <div class="flex gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-latte text-terracotta"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v5l3.25 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3 class="text-xs font-bold uppercase tracking-wider">Jam buka</h3><p class="mt-1 text-sm text-espresso/65">Setiap hari · 10.00–22.00 WIB</p><p class="mt-1 text-[10px] text-espresso/45">Jam operasional dapat berubah saat hari libur.</p></div></div>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=AmpuCoffe+Purwokerto" target="_blank" rel="noopener noreferrer" class="mt-9 inline-flex items-center gap-3 rounded-full bg-espresso px-6 py-4 text-sm font-semibold text-cream transition hover:bg-terracotta">Cari di Google Maps <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="reveal delay-1 relative min-h-[350px] overflow-hidden rounded-[2rem] bg-[#d7c8b3] sm:min-h-[470px]">
+          <div class="absolute inset-0 opacity-50" style="background-image:linear-gradient(30deg,transparent 48%,#c2af96 49%,#c2af96 50%,transparent 51%),linear-gradient(120deg,transparent 48%,#c2af96 49%,#c2af96 50%,transparent 51%);background-size:70px 70px;"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="relative flex h-20 w-20 items-center justify-center rounded-full bg-terracotta text-cream shadow-xl after:absolute after:inset-[-12px] after:rounded-full after:border after:border-terracotta/50 after:content-['']"><svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.25 10c0 5-7.25 11-7.25 11S4.75 15 4.75 10a7.25 7.25 0 1 1 14.5 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.25" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          </div>
+          <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl bg-cream/90 p-4 backdrop-blur sm:bottom-7 sm:left-7 sm:right-7 sm:p-5"><div><p class="font-display text-lg">AmpuCoffe</p><p class="mt-1 text-[10px] text-espresso/55">Purwokerto · Jawa Tengah</p></div><svg class="h-5 w-5 text-terracotta" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.75 14.4 9.6 21.25 12l-6.85 2.4L12 21.25 9.6 14.4 2.75 12 9.6 9.6 12 2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <a class="absolute inset-0" href="https://www.google.com/maps/search/?api=1&query=AmpuCoffe+Purwokerto" target="_blank" rel="noopener noreferrer" aria-label="Buka pencarian AmpuCoffe Purwokerto di Google Maps"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-espresso px-6 pb-8 pt-14 text-cream sm:px-10 sm:pt-16 lg:px-16">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-10 border-b border-white/15 pb-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_.8fr]">
+        <div><a href="#beranda" class="inline-flex items-center gap-3"><img src="image/LogoAmpu.jpeg" alt="Logo AmpuCoffe" class="h-12 w-12 rounded-full bg-white object-cover"><span class="font-display text-2xl">Ampu<span class="text-[#dda17c]">Coffe</span></span></a><p class="mt-5 max-w-xs text-xs leading-6 text-white/55">Kopi, ruang, dan cerita. Tempat kecil untuk menemukan jeda di tengah hari.</p></div>
+        <div><h2 class="text-[10px] font-bold uppercase tracking-[.2em] text-[#dda17c]">Jelajahi</h2><div class="mt-5 grid gap-3 text-xs text-white/70"><a class="transition hover:text-white" href="#cerita">Cerita kami</a><a class="transition hover:text-white" href="#menu">Menu</a><a class="transition hover:text-white" href="#ruang">Ruang kami</a></div></div>
+        <div><h2 class="text-[10px] font-bold uppercase tracking-[.2em] text-[#dda17c]">Temui kami</h2><div class="mt-5 grid gap-3 text-xs text-white/70"><a class="inline-flex items-center gap-1 transition hover:text-white" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="inline-flex items-center gap-1 transition hover:text-white" href="https://www.google.com/maps/search/?api=1&query=AmpuCoffe+Purwokerto" target="_blank" rel="noopener noreferrer">Google Maps <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>Purwokerto, Indonesia</span></div></div>
+      </div>
+      <div class="flex flex-col gap-3 pt-6 text-[10px] text-white/45 sm:flex-row sm:items-center sm:justify-between"><p><svg class="mr-1 inline h-3 w-3 align-[-2px]" viewBox="0 0 16 16" fill="none" aria-label="Hak cipta"><circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.2"/><path d="M10.2 5.9a2.35 2.35 0 1 0 0 4.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span id="year"></span> AmpuCoffe. Dibuat dengan sepenuh hati.</p><a href="#beranda" class="inline-flex items-center gap-1 transition hover:text-white">Kembali ke atas <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19.25V4.75m-6 6 6-6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="fixed inset-0 z-[70] hidden items-center justify-center bg-espresso/95 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Pratinjau galeri">
+    <button id="lightbox-close" class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/15" aria-label="Tutup galeri"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+    <figure class="max-h-[90vh] max-w-5xl text-center"><img id="lightbox-image" class="max-h-[78vh] max-w-full rounded-2xl object-contain shadow-2xl" src="" alt=""><figcaption id="lightbox-caption" class="mt-4 text-sm text-white/75"></figcaption></figure>
+  </div>
+
+  <div id="info-bubble" class="info-bubble">
+    <button id="back-to-top" class="info-bubble-toggle" type="button" aria-label="Kembali ke atas">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19.25V4.75m-6 6 6-6 6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
