@@ -84,6 +84,11 @@ body {
   transition: opacity .25s ease, transform .25s ease;
 }
 
+.menu-card h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .menu-card.is-hidden {
   display: none;
 }
@@ -103,7 +108,7 @@ body {
   inset: 0;
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform .6s cubic-bezier(.2, .7, .2, 1);
 }
 
